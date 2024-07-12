@@ -18,7 +18,7 @@ const AddTool = () => {
   useEffect(() => {
     const fetchCategories = async () => {
       try {
-        const response = await axios.get("http://localhost:3000/api/category");
+        const response = await axios.get("https://webdevtools.vercel.app/api/category");
         setCategories(response.data.data);
         setLoading(false);
       } catch (error) {
@@ -46,10 +46,7 @@ const AddTool = () => {
         ...data,
         category: data.category.join(", "),
       };
-      console.log(formattedData)
-
-      console.log(formattedData);
-      const response = await axios.post("http://localhost:3000/api/tools", formattedData); // Adjust API endpoint as per your backend
+      const response = await axios.post("https://webdevtools.vercel.app/api/tools", formattedData); // Adjust API endpoint as per your backend
       console.log(response.data); // Log the response for debugging
       setSuccessMessage('Tool added successfully!');
       setErrorMessage('');

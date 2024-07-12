@@ -23,7 +23,7 @@ const Page = () => {
   const onSubmit = async (data: AddCategorySchema) => {
     // Simulate async operation
     try {
-      const response = await axios.post('http://localhost:3000/api/category', data);
+      const response = await axios.post('https://webdevtools.vercel.app/api/category', data);
       setResult(response);
       reset();
       setSuccessMessage('Category added successfully!');

@@ -4,7 +4,7 @@ import axios from "axios";
 import LandingPage from "@/components/LandingPage";
 
 export default async function Home() {
-  const tools = await axios.get('http://localhost:3000/api/tools')
+  const tools = await axios.get('https://webdevtools.vercel.app/api/tools')
 
   return (
     <div className="min-h-screen flex flex-col justify-center items-center bg-gray-100 p-4">
