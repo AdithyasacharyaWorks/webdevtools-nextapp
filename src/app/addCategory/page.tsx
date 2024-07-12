@@ -5,7 +5,6 @@ import { useForm } from "react-hook-form";
 import { addCategorySchema, AddCategorySchema } from "@/app/types/addCategory";
 import axios from "axios";
 import { useState } from "react";
-import { TbFaceIdError } from "react-icons/tb";
 
 const Page = () => {
   const {
@@ -60,7 +59,7 @@ const Page = () => {
           )}
           {result?.data?.status === 400 && (
             <p className="text-red-500 mb-1 flex items-center gap-2">
-              <TbFaceIdError /><span>The category is already present</span>
+              <span>The category is already present</span>
             </p>
           )}
 

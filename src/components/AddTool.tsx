@@ -4,7 +4,6 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
-import { FaToolbox, FaInfoCircle, FaListAlt, FaTag, FaLink } from "react-icons/fa";
 import LetterPullup from "./ui/LetterPullup";
 import Loader from "./Loader";
 import { addToolSchema, AddToolSchema } from "@/app/types/addTool";
@@ -71,7 +70,7 @@ const AddTool = () => {
       >
         <label className="w-full">
           <div className="flex items-center text-lg font-semibold text-gray-800 mb-1">
-            <span className="mr-2"><FaToolbox /></span> Please add tool name
+            Please add tool name
           </div>
           <input
             type="text"
@@ -87,7 +86,7 @@ const AddTool = () => {
         </label>
         <label className="w-full">
           <div className="flex items-center text-lg font-semibold text-gray-800 mb-1">
-            <span className="mr-2"><FaInfoCircle /></span> Detail
+             Detail
           </div>
           <input
             type="text"
@@ -103,7 +102,7 @@ const AddTool = () => {
         </label>
         <label className="w-full">
           <div className="flex items-center text-lg font-semibold text-gray-800 mb-1">
-            <span className="mr-2"><FaListAlt /></span> Select the categories
+           Select the categories
           </div>
           {loading ? (
             <Loader />
@@ -128,7 +127,7 @@ const AddTool = () => {
         </label>
         <label className="w-full">
           <div className="flex items-center text-lg font-semibold text-gray-800 mb-1">
-            <span className="mr-2"><FaTag /></span> Add label
+            Add label
           </div>
           <input
             type="text"
@@ -144,7 +143,7 @@ const AddTool = () => {
         </label>
         <label className="w-full">
           <div className="flex items-center text-lg font-semibold text-gray-800 mb-1">
-            <span className="mr-2"><FaLink /></span> Please add website URL
+            Please add website URL
           </div>
           <input
             type="text"
