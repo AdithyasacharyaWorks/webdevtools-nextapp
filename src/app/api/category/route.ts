@@ -4,6 +4,7 @@ import { Query } from "appwrite";
 
 export async function GET(){
     try {
+      console.log("here to get category")
         const listOfCategory = await database.listDocuments(
             process.env.DB_ID!,
             process.env.CATEGORY_CL!,
@@ -16,6 +17,7 @@ export async function GET(){
 }
 
 export async function POST(request: Request) {
+  console.log("here")
     const data = await request.json();
   
     try {
