@@ -17,7 +17,8 @@ export async function GET() {
     const result = await database.listDocuments(
       process.env.DB_ID!,
       process.env.TOOLS_CL!,
-      [Query.select(["toolName", "detail", "category", "Label", "webUrl","$id"])]
+      [Query.select(["toolName", "detail", "category", "Label", "webUrl","$id"]),Query.limit(100)]
+
     );
     return NextResponse.json({ status: 200, data: result?.documents });
   } catch (error) {
