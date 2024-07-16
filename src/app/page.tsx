@@ -10,7 +10,7 @@ export default async function Home() {
     <div className="min-h-screen flex flex-col justify-center items-center bg-gray-100 p-4">
       <div className="flex justify-center">
         <SignedIn>
-          <Card tools={tools?.data?.data} />
+          <Card tools={tools?.data} />
         </SignedIn>
         <SignedOut>
           <LandingPage />
